@@ -38,8 +38,6 @@ func main() {
 
 	// 第三题
 	fmt.Println("---------第三题-----------")
-	fmt.Println("测试：", util.DecimalToAny(64, 80))
-	fmt.Println("测试80进制4位数边界:", util.AnyToDecimal("]]]]", 80))
 	// 使用salt使别人知道即便知道算法，但是无法预测结果
 	salt := 12367
 	for i := 8000000; i < 8000010; i++ {
