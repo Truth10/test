@@ -115,6 +115,10 @@ func UserRegister(userName string, userDevice string) {
 }
 
 func UserLogin(userName string, password string) {
+	// 1.用户登录时生成一个token，及一个auto_token，存入redis，过期时间设置30分钟
+	// 2.半小时内，请求header只要带有有效token，即可通过鉴权，正常访问接口；
+	// 3.一旦token失效，可通过auto_token通过接口换取有效token
+	// 4.如果token及auto_token均失效，需要让用户重新登录
 	fmt.Println("用户登录成功")
 }
 
